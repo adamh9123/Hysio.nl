@@ -1,0 +1,95 @@
+:root {
+  /* Colors */
+  --hysio-mint: #A5E1C5;
+  --hysio-mint-dark: #5BC49E;
+  --hysio-green-body: #003728;
+  --hysio-green-heading: #004B3A;
+  --hysio-off-white: #FDFDFD;
+  --hysio-light-gray: #f0f0f0;
+  --hysio-error-red: #E53E3E;
+  --hysio-success-green: #38A169;
+
+
+  /* Typography */
+  --font-primary: "Inter", sans-serif;
+  --font-size-base: 16px;
+
+  /* Spacing */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+
+  /* Borders */
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+/* Reset and base styles */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-family: var(--font-primary);
+  color: var(--hysio-green-body);
+  background-color: var(--hysio-off-white);
+  font-size: var(--font-size-base);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--hysio-green-heading);
+    font-weight: 700; /* Inter Bold */
+}
+
+h1 { font-size: 3rem; /* ~48px */ }
+h2 { font-size: 2.25rem; /* ~36px */ }
+h3 { font-size: 1.5rem; /* ~24px */ }
+h4 { font-size: 1.25rem; /* ~20px */ }
+
+p {
+    margin-bottom: var(--space-4);
+}
+
+/* Utility classes that might be useful later */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
