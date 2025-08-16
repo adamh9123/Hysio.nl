@@ -1,0 +1,99 @@
+/* Page Wrapper */
+.pageWrapper {
+    width: 100%;
+    padding: var(--space-10) 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 900px; /* A bit narrower for readability */
+    margin: 0 auto;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    margin-bottom: var(--space-10);
+}
+
+.header h1 {
+    margin-bottom: var(--space-4);
+}
+
+/* FAQ Section */
+.faqSection {
+    margin-bottom: var(--space-12);
+}
+
+.faqItem {
+    border-bottom: 1px solid var(--hysio-light-gray);
+}
+
+.faqQuestion {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    background: none;
+    border: none;
+    padding: var(--space-4) 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    color: var(--hysio-green-heading);
+}
+
+.faqIcon {
+    font-size: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.faqQuestion.open .faqIcon {
+    transform: rotate(45deg);
+}
+
+.faqAnswer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out;
+    padding: 0 var(--space-4);
+}
+
+.faqAnswer.open {
+    max-height: 500px; /* Adjust as needed */
+    padding: 0 var(--space-4) var(--space-4) var(--space-4);
+}
+
+.faqAnswer p {
+    margin: 0;
+}
+
+/* Contact Support CTA */
+.contactSupport {
+    background-color: rgba(165, 225, 197, 0.1); /* mint-tint at 10% opacity */
+    border: 1px solid rgba(165, 225, 197, 0.3);
+    border-radius: var(--border-radius-md);
+    padding: var(--space-6);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-4);
+}
+
+.contactIcon {
+    font-size: 2rem;
+    color: var(--hysio-mint-dark);
+}
+
+.contactSupport p {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.contactSupport a {
+    font-weight: 600;
+    color: var(--hysio-mint-dark);
+    text-decoration: underline;
+}

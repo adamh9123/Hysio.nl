@@ -1,0 +1,157 @@
+/* Main Header Styles */
+.header {
+    background-color: var(--hysio-off-white);
+    padding: var(--space-4) 0;
+    border-bottom: 1px solid var(--hysio-light-gray);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Logo */
+.logo a {
+    font-size: 1.5rem; /* 24px */
+    font-weight: 700; /* Bold */
+    color: var(--hysio-green-heading);
+}
+
+.logo a span {
+    color: var(--hysio-mint-dark);
+}
+
+/* Desktop Navigation */
+.navList {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: var(--space-6); /* 24px */
+}
+
+.navLink a {
+    color: var(--hysio-green-body);
+    font-weight: 600; /* Semi-bold */
+    padding-bottom: var(--space-1);
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s ease, color 0.3s ease;
+}
+
+.navLink a:hover {
+    color: var(--hysio-mint-dark);
+}
+
+.navLink a.active {
+    color: var(--hysio-mint-dark);
+    border-bottom-color: var(--hysio-mint-dark);
+}
+
+/* Action Buttons */
+.actions {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+}
+
+.loginLink {
+    font-weight: 600;
+    color: var(--hysio-green-body);
+}
+
+.registerButton {
+    background-color: var(--hysio-mint);
+    color: var(--hysio-green-heading);
+    font-weight: 700;
+    padding: var(--space-2) var(--space-4);
+    border-radius: var(--border-radius-sm);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.registerButton:hover {
+    background-color: var(--hysio-mint-dark);
+}
+
+/* Hamburger Menu (Mobile) */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 2rem;
+    height: 2rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 20;
+}
+
+.hamburger div {
+    width: 2rem;
+    height: 0.25rem;
+    background-color: var(--hysio-green-heading);
+    border-radius: 10px;
+    transition: all 0.3s linear;
+    position: relative;
+    transform-origin: 1px;
+}
+
+/* Mobile Nav Menu Styles */
+.mobileNav {
+    display: none;
+}
+
+
+/* Media Query for Mobile */
+@media (max-width: 768px) {
+    .navList, .actions {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .mobileNav {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: var(--space-8);
+        background: var(--hysio-off-white);
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100%;
+        transition: transform 0.3s ease-in-out;
+        transform: translateX(100%);
+        z-index: 15;
+    }
+
+    .mobileNav.open {
+        transform: translateX(0);
+    }
+
+    .mobileNav .navLink a {
+        font-size: 1.5rem;
+    }
+
+    .mobileNav .loginLink {
+        font-size: 1.5rem;
+    }
+
+    .mobileNav .registerButton {
+        font-size: 1.5rem;
+        padding: var(--space-3) var(--space-6);
+    }
+}

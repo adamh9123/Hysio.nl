@@ -1,0 +1,177 @@
+/* General Section Styling */
+.section {
+    width: 100%;
+    padding: var(--space-12) 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Hero Section */
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: var(--space-10);
+    padding-top: var(--space-10);
+    padding-bottom: var(--space-12);
+}
+
+.heroText h1 {
+    font-size: 3.5rem; /* ~56px */
+    line-height: 1.2;
+    margin-bottom: var(--space-4);
+}
+
+.heroText p {
+    font-size: 1.125rem; /* 18px */
+    margin-bottom: var(--space-6);
+    max-width: 500px;
+}
+
+.heroButton {
+    display: inline-block;
+    background-color: var(--hysio-mint);
+    color: var(--hysio-green-heading);
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding: var(--space-4) var(--space-8);
+    border-radius: var(--border-radius-sm);
+    transition: background-color 0.3s ease;
+}
+
+.heroButton:hover {
+    background-color: var(--hysio-mint-dark);
+}
+
+.heroImage {
+    text-align: center;
+}
+
+.heroImage img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--border-radius-md);
+}
+
+/* Features Section */
+.features {
+    background-color: #fff; /* A slightly different background */
+}
+
+.featuresGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-8);
+    text-align: center;
+}
+
+.featureCard {
+    padding: var(--space-6);
+}
+
+.featureIcon {
+    font-size: 2.5rem;
+    color: var(--hysio-mint-dark);
+    margin-bottom: var(--space-4);
+}
+
+.featureCard h3 {
+    margin-bottom: var(--space-2);
+}
+
+/* Blog Section */
+.blogHighlights h2, .features h2 {
+    text-align: center;
+    margin-bottom: var(--space-8);
+}
+
+.blogGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-6);
+}
+
+.blogCard {
+    border: 1px solid var(--hysio-light-gray);
+    border-radius: var(--border-radius-md);
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+}
+
+.blogCard:hover {
+    box-shadow: var(--shadow-md);
+}
+
+.blogCardContent {
+    padding: var(--space-4);
+}
+
+.blogCardContent h3 {
+    margin-bottom: var(--space-2);
+}
+
+.blogCardContent p {
+    font-size: 0.9rem;
+    margin-bottom: var(--space-4);
+}
+
+.blogCard a {
+    font-weight: 600;
+    color: var(--hysio-mint-dark);
+}
+
+/* CTA Section */
+.cta {
+    background-color: var(--hysio-mint);
+    text-align: center;
+    padding: var(--space-12) var(--space-4);
+}
+
+.cta h2 {
+    color: var(--hysio-green-heading);
+    font-size: 2rem;
+    margin-bottom: var(--space-6);
+}
+
+.ctaButton {
+    display: inline-block;
+    background-color: var(--hysio-mint-dark);
+    color: white;
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding: var(--space-4) var(--space-8);
+    border-radius: var(--border-radius-sm);
+    transition: transform 0.2s ease;
+}
+
+.ctaButton:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .heroText p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .featuresGrid, .blogGrid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .featuresGrid, .blogGrid {
+        grid-template-columns: 1fr;
+    }
+    .heroText h1 {
+        font-size: 2.5rem;
+    }
+}

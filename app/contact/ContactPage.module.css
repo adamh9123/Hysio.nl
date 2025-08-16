@@ -1,0 +1,139 @@
+/* Page Wrapper */
+.pageWrapper {
+    width: 100%;
+    padding: var(--space-10) 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    margin-bottom: var(--space-10);
+}
+
+.header h1 {
+    margin-bottom: var(--space-4);
+}
+
+/* Main Content Layout */
+.contentGrid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: var(--space-12);
+}
+
+/* Contact Info Section */
+.contactInfo {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+}
+
+.infoItem {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+}
+
+.infoIcon {
+    font-size: 1.5rem;
+    color: var(--hysio-mint-dark);
+    width: 30px; /* To align text */
+    text-align: center;
+}
+
+.infoItem a {
+    transition: color 0.3s ease;
+}
+
+.infoItem a:hover {
+    color: var(--hysio-mint-dark);
+}
+
+
+/* Contact Form Section */
+.contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+}
+
+.formGroup label {
+    margin-bottom: var(--space-2);
+    font-weight: 600;
+}
+
+.formGroup input,
+.formGroup textarea {
+    width: 100%;
+    padding: var(--space-3);
+    border: 1px solid var(--hysio-light-gray);
+    border-radius: var(--border-radius-sm);
+    font-size: 1rem;
+    font-family: inherit;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus {
+    border-color: var(--hysio-mint-dark);
+}
+
+.formGroup textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.submitButton {
+    align-self: flex-start;
+    background-color: var(--hysio-mint);
+    color: var(--hysio-green-heading);
+    font-weight: 700;
+    padding: var(--space-3) var(--space-6);
+    border: none;
+    border-radius: var(--border-radius-sm);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submitButton:hover {
+    background-color: var(--hysio-mint-dark);
+}
+
+/* Feedback Messages */
+.errorMessage, .successMessage {
+    padding: var(--space-3);
+    border-radius: var(--border-radius-sm);
+    margin-top: var(--space-4);
+}
+
+.errorMessage {
+    background-color: #FED7D7;
+    color: var(--hysio-error-red);
+    border: 1px solid var(--hysio-error-red);
+}
+
+.successMessage {
+    background-color: #C6F6D5;
+    color: var(--hysio-success-green);
+    border: 1px solid var(--hysio-success-green);
+}
+
+/* Responsive Styles */
+@media (max-width: 900px) {
+    .contentGrid {
+        grid-template-columns: 1fr;
+        gap: var(--space-10);
+    }
+}
